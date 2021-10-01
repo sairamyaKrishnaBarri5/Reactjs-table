@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import './table.css';
-//import './Comp/validation.js'
+
 
 export default function App() {
   const [data, setData] = useState("");
@@ -31,9 +30,10 @@ const time = new Date().toLocaleTimeString();
 
   return (
     <div className="App">
+      <h2>SMILE CDR</h2>
     <div className="search"> <input
         type="text"
-        placeholder="Name"
+        placeholder="Enter Name"
         className="searchname"
         value={searchTerm}
        onChange={handleChange}/>
@@ -45,7 +45,7 @@ const time = new Date().toLocaleTimeString();
        onChange={handleChangedob}
       
 
-      /><button>Reset</button></div>
+      /><button className="reset">Reset</button></div>
       
       <table>
       <th>FirstName</th>
@@ -57,11 +57,10 @@ const time = new Date().toLocaleTimeString();
         {data && (
           <tbody>
             {data.entry.filter((item, i)=>{
-              if(searchTerm ==""){
+              if(searchTerm ===""){
                 return item;
               } else{
-                if(item.resource.name && item.resource.name[0].family.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                item.resource.name && item.resource.name[0].given.toLowerCase().includes(searchTerm.toLowerCase())
+                if(item.resource.name && item.resource.name[0].family.toLowerCase().includes(searchTerm.toLowerCase()) 
                  ){
                   return item;
                 }
@@ -109,9 +108,8 @@ const time = new Date().toLocaleTimeString();
           </tbody>
         )}
       </table>
+  <div className="datetime container">{date} {time}</div>
 
-      
-     <div className="datetime container">{date} {time}</div>
     </div>
   
 
