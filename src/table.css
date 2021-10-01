@@ -1,3 +1,16 @@
+body{
+  background: linear-gradient(#89f7fe,midnightblue);
+    
+}
+h2{
+  text-align: center;
+  font-family:"Poppins", sans-serif;
+  margin-top: 30px;
+  color: midnightblue;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 4em;
+}
 table {
     font-family: "Poppins", sans-serif;
     border-collapse: collapse;
@@ -27,6 +40,8 @@ table {
   .search{
     width: 80%;
     margin: 50px auto;
+    text-align: center;
+    color: black;
     
     
     
@@ -35,6 +50,8 @@ table {
     width: 30%;
     padding: .375rem .75rem;
     font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
     font-weight: 400;
     line-height: 1.5;
     margin-right: 30px;
@@ -53,4 +70,26 @@ table {
   text-align: center;
   font-weight: 500;
   font-size: 30px;
+  color: white;
+}
+.reset{
+  text-align: center;
+  padding: 5px 18px;
+  border-radius: 5px;
+}
+@media(max-width:992px){
+  .search{
+    width: 100%;
+    font-size: 12px;
+    
+  }
+  h2{
+    font-size: 3em;
+  }
+  table td, table th{
+    font-size: 12px;
+  }
+  .searchname{
+    margin-right: 15px;
+  }
 }
